@@ -47,9 +47,6 @@ class Pair {
 
 //User function Template for Java
 
-
-
-
 class Solve {
     Pair getFloorAndCeil(int[] arr, int n, int x) {
         // code here
@@ -77,3 +74,40 @@ class Solve {
     }
 }
 
+/*
+
+//User function Template for Java
+class Solve {
+    Pair getFloorAndCeil(int[] arr, int n, int x) {
+        // code here
+        Arrays.sort(arr);
+        int start=0;
+        int end=n-1;
+        int floor=-1;
+        int ceil=-1;
+        while(start<=end){
+            int mid=((end-start)/2)+start;
+            if(arr[mid]<=x){
+                floor=arr[mid];
+                start=mid+1;
+            }
+            else{
+                end=mid-1;
+            }
+        }
+        start=0;
+        end=n-1;
+        while(start<=end){
+            int mid=((end-start)/2)+start;
+            if(arr[mid]>=x){
+                ceil=arr[mid];
+                end=mid-1;
+            }
+            else{
+                start=mid+1;
+            }
+        }
+        return new Pair(floor,ceil);
+    }
+}
+*/
